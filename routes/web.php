@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return Inertia::render('Welcome');
+})->name('index');
+
+Route::get('/blade', function () {
     return view('BladeSwal');
-//    return \Inertia\Inertia::render('VueSwal');
-});
+})->name('blade');
+
+Route::get('/vue', function () {
+    return Inertia::render('VueSwal');
+})->name('vue');

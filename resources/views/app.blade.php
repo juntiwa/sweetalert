@@ -12,6 +12,5 @@
 </head>
 <body class="font-athiti">
 @inertia
-
 </body>
 </html>

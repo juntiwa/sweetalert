@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+    <title>blade</title>
 
     @vite('resources/js/app.js')
 
@@ -16,25 +17,29 @@
 <p class="text-base">Blade</p>
 
 <button
-    onclick="mysweet()"
-    class="bg-sky-600 px-3 py-2 mr-4 no-underline rounded text-white hover:scale-125"
+    onclick="mySweet()"
+    class="bg-teal-500 px-3 py-2 mr-4 no-underline rounded text-white hover:bg-teal-600 hover:scale-110"
 >
     show swal
 </button>
 <button
     onclick="toast()"
-    class="bg-sky-600 px-3 py-2 mr-4 no-underline rounded text-white hover:scale-125"
+    class="bg-teal-500 px-3 py-2 mr-4 no-underline rounded text-white hover:bg-teal-600 hover:scale-110"
 >
     show toast
 </button>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function mysweet() {
+    function mySweet() {
         swal.fire({
             title: 'Error!',
             text: 'Do you want to continue',
-            icon: 'error',
+            icon: 'question',
             confirmButtonText: 'Cool',
+            showCancelButton: true,
+            cancelButtonText: 'cancel',
+            cancelButtonColor: '#d33',
+
         })
     }
 
